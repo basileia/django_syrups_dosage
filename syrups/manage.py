@@ -7,9 +7,6 @@ import sys
 def main():
     """Run administrative tasks."""
 
-    #production_settings = os.path.join(os.getcwd(), "dosage", "production")
-    #dev_settings = os.path.join(os.getcwd(), "dosage", "settings")
-
     settings_module = (
         "syrups.production" if "WEBSITE_HOSTNAME" in os.environ else "syrups.settings"
     )
