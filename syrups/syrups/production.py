@@ -29,7 +29,7 @@ SECRET_KEY = config('SECRET_KEY')
 # DEBUG = False
 DEBUG = False
 
-ALLOWED_HOSTS = "https://django-syrups-dosage.herokuapp.com/"  # doplnit heroku adresu
+ALLOWED_HOSTS = ["https://django-syrups-dosage.herokuapp.com/"]  # doplnit heroku adresu
 
 
 # Application definition
