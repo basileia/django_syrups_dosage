@@ -7,8 +7,11 @@ import sys
 def main():
     """Run administrative tasks."""
 
+    #production_settings = os.path.join(os.getcwd(), "dosage", "production")
+    #dev_settings = os.path.join(os.getcwd(), "dosage", "settings")
+
     settings_module = (
-        "dosage.production" if "WEBSITE_HOSTNAME" in os.environ else "dosage.settings"
+        "syrups.production" if "WEBSITE_HOSTNAME" in os.environ else "syrups.settings"
     )
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", settings_module)
 
