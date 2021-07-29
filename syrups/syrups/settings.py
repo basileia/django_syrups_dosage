@@ -28,7 +28,7 @@ SECRET_KEY = config('SECRET_KEY')
 # DEBUG = False
 DEBUG = True
 
-ALLOWED_HOSTS = "*"  # doplnit heroku adresu
+ALLOWED_HOSTS = ["*"]  # doplnit heroku adresu
 
 
 # Application definition
