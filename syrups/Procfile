@@ -1,1 +1,1 @@
-web: gunicorn syrups.wsgi_:application --log-file
+web gunicorn syrups.wsgi:application --log-file -
