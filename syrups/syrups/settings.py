@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 from decouple import config
+import django_heroku
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -53,9 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-#CSRF_COOKIE_SECURE = True
-#SESSION_COOKIE_SECURE = True
-# SECURE_SSL_REDIRECT = True
+
 ROOT_URLCONF = 'syrups.urls'
 
 TEMPLATES = [
@@ -80,14 +80,9 @@ WSGI_APPLICATION = 'syrups.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-"""
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-"""
+
+# Activate Django-Heroku.
+django_heroku.settings(locals(), databases=False),
 
 
 # Password validation
