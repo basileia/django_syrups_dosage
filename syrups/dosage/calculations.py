@@ -1,5 +1,18 @@
-from .secrets import get_db_connection
+from decouple import config
+from pymongo import MongoClient
 from sys import maxsize
+
+
+def get_connection():
+    return MongoClient(
+        config('MONGODB_URI')
+    )
+
+
+def get_db_connection():
+    connection = get_connection()
+    db = connection.sirups_information
+    return db.sirups
 
 
 def age_to_months(age):

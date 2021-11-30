@@ -1,6 +1,5 @@
 from django.shortcuts import render
-from os import path
-from .secrets import get_db_connection
+from .calculations import get_db_connection
 from .calculations import dosage_erdomed, dosage_range_by_age_and_weight, age_to_months, dosage_ospen, dosage_ospamox, dosage_sumamed
 
 
